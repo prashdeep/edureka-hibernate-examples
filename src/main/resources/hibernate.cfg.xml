@@ -1,0 +1,24 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.show_sql">true</property>
+        <property name="format_sql">true</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL57Dialect</property>
+        <property name="hbm2ddl.auto">create</property>
+        <property name="connection.username">root</property>
+        <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="connection.password">welcome</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/emp_db</property>
+        <property name="cache.use_query_cache">true</property>
+        <mapping class="com.edureka.hibernate.model.User"/>
+        <mapping class="com.edureka.hibernate.model.Address"/>
+        <mapping class="com.edureka.hibernate.model.Vehicle"/>
+        <mapping class="com.edureka.hibernate.model.Course"/>
+        <mapping class="com.edureka.hibernate.model.RegularEmployee"/>
+        <mapping class="com.edureka.hibernate.model.ContractEmployee"/>
+        <mapping class="com.edureka.hibernate.model.Employee"/>
+    </session-factory>
+
+</hibernate-configuration>
